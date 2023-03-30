@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import CandidateDisplay from "./components/CandidateDisplay/CandidateDisplay";
+import Hero from "./components/Hero/Hero";
 import Input from "./components/Input/Input";
 import { candidatesList } from "./candidatesData/candidatesList";
 import { candidateMatch } from "./util/match";
 
 export function App() {
-  const [requiredSkills, setRequiredSkills] = useState(["AWS"]);
+  const [requiredSkills, setRequiredSkills] = useState([]);
   const [candidates, setCandidates] = useState(candidatesList);
 
   function handleClick(candidates, requiredSkills) {
@@ -15,7 +16,8 @@ export function App() {
   }
 
   return (
-    <div className="bg-red-100 w-full h-100vh">
+    <div className="bg-slate-400 w-full h-100vh p-10 flex flex-col ">
+      <Hero/>
       <Input
         requiredSkills={requiredSkills}
         setRequiredSkills={setRequiredSkills}
