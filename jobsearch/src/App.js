@@ -6,13 +6,13 @@ import Input from "./components/Input/Input";
 export function App() {
   const [requiredSkills, setRequiredSkills] = useState([]);
 
-  //console.log(requiredSkills, "Skills");
 
   return (
-    <div className="bg-red-100 w-full h-100vh">
+    <div className="bg-red-100   pt-2 flex flex-cols">
       <Input
         requiredSkills={requiredSkills}
         setRequiredSkills={setRequiredSkills}
+      
       />
       <CandidateDisplay />
     </div>
